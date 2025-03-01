@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "name": "vercel-cron",
+  "builds": [{ "src": "app.js", "use": "@vercel/node" }],
+  "routes": [{ "src": "/(.*)", "dest": "/app.js" }],
+  "crons": [
+    {
+      "path": "/api/email/send",
+      "schedule": "*/30 * * * *"
+    }
+  ]
+}
